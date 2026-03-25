@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════
+   PAGE TRANSITION — Slide-up
+   ═══════════════════════════════════════ */
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+/* ═══════════════════════════════════════
+   LAZY LOAD FADE-IN
+   ═══════════════════════════════════════ */
+
+.lazyload,
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.lazyloaded,
+.lazy.loaded {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════
+   THUMBNAIL HOVER
+   ═══════════════════════════════════════ */
+
+.work-item img,
+.thumb img {
+  transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+}
+
+.work-item:hover img,
+.thumb:hover img {
+  opacity: 0.85;
+}
+
+/* ═══════════════════════════════════════
+   MOBILE NAV
+   ═══════════════════════════════════════ */
+
+.mobile-nav-overlay {
+  transition: transform 300ms cubic-bezier(0.52, 0.16, 0.24, 1);
+}

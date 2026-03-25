@@ -1,0 +1,52 @@
+/* ═══════════════════════════════════════
+   FONT IMPORTS
+   Instrument Serif (display) — Google Fonts
+   Geist (body)              — Google Fonts
+   ═══════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHIC SCALE
+   Flatt hierarki — størrelse via kontekst
+   ═══════════════════════════════════════ */
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 0.14px;
+}
+
+/* Logo — serif */
+.logo {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Section titles — same size as body, context defines hierarchy */
+.section-title {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  margin-bottom: var(--space-sm);
+}
+
+/* Large quote — Instrument Serif italic for dramatic effect */
+.quote-text {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Captions */
+.caption {
+  font-size: 13px;
+  color: var(--color-gray-caption);
+  line-height: 18.2px;
+}

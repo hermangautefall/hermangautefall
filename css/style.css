@@ -653,8 +653,18 @@ main {
 /* Hero */
 .pt-hero {
   background-color: var(--color-black);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   padding: calc(var(--nav-height) + var(--space-xl)) 5% var(--space-xl);
   text-align: center;
+}
+
+.pt-hero--bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+    url('../images/pianoundervisning/Pianobilde 1.jpg');
 }
 
 .pt-hero-inner {
@@ -726,6 +736,33 @@ main {
   line-height: 1.7;
   color: var(--color-text);
   margin-bottom: 1em;
+}
+
+.pt-tilpasset-split {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+.pt-tilpasset-split-text {
+  flex: 1;
+}
+
+.pt-tilpasset-portrait {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  border: 3px solid var(--color-gray-light);
+}
+
+.pt-tilpasset-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pt-list-intro {
@@ -977,6 +1014,17 @@ main {
   }
 
   /* Pianotimer mobile */
+  .pt-tilpasset-split {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pt-tilpasset-portrait {
+    width: 180px;
+    height: 180px;
+    order: -1;
+  }
+
   .pt-hero-h1 {
     font-size: 26px;
   }

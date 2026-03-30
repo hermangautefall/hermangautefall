@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════
-   NAVBAR — Transparent → Opaque on scroll
+   NAVBAR — Økt opasitet ved scroll > 60px
    ═══════════════════════════════════════ */
 
 (function () {
@@ -7,28 +7,19 @@
   if (!nav) return;
 
   function updateNav() {
-    const heroHeight = window.innerHeight * 0.8;
-    if (window.scrollY > heroHeight) {
-      nav.classList.remove('nav-transparent');
-      nav.classList.add('nav-opaque');
+    if (window.scrollY > 60) {
+      nav.classList.add('nav-scrolled');
     } else {
-      nav.classList.remove('nav-opaque');
-      nav.classList.add('nav-transparent');
+      nav.classList.remove('nav-scrolled');
     }
   }
 
-  // Pages without hero get opaque nav immediately
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    nav.classList.add('nav-transparent');
-    window.addEventListener('scroll', updateNav, { passive: true });
-  } else {
-    nav.classList.add('nav-opaque');
-  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 })();
 
 /* ═══════════════════════════════════════
-   MOBILE NAV
+   MOBIL NAV
    ═══════════════════════════════════════ */
 
 (function () {
@@ -43,17 +34,15 @@
 })();
 
 /* ═══════════════════════════════════════
-   PAGE TRANSITIONS — Slide-up overlay
+   SIDE-OVERGANG — Slide-up overlay
    ═══════════════════════════════════════ */
 
 (function () {
   const overlay = document.querySelector('.page-overlay');
   if (!overlay) return;
 
-  // Intercept internal navigation links
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    // Skip external links, anchors, and language switch on current page
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) return;
 
     link.addEventListener('click', (e) => {
@@ -65,7 +54,6 @@
     });
   });
 
-  // On page load, slide the overlay away
   window.addEventListener('load', () => {
     overlay.style.transform = 'translateY(0)';
     overlay.style.transition = 'none';
@@ -77,7 +65,32 @@
 })();
 
 /* ═══════════════════════════════════════
-   LAZY LOADING — Images
+   SCROLL FADE-IN — .fade-in-el
+   ═══════════════════════════════════════ */
+
+(function () {
+  const fadeEls = document.querySelectorAll('.fade-in-el');
+  if (!fadeEls.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    fadeEls.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeEls.forEach(el => observer.observe(el));
+})();
+
+/* ═══════════════════════════════════════
+   LAZY LOADING — Bilder
    ═══════════════════════════════════════ */
 
 (function () {

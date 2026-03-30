@@ -1,52 +1,63 @@
 /* ═══════════════════════════════════════
    FONT IMPORTS
-   Instrument Serif (display) — Google Fonts
-   Geist (body)              — Google Fonts
+   Playfair Display (display/titler) — Google Fonts
+   Inter (brødtekst)                 — Google Fonts
    ═══════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
 
 /* ═══════════════════════════════════════
-   TYPOGRAPHIC SCALE
-   Flatt hierarki — størrelse via kontekst
+   TYPOGRAFISK SKALA
    ═══════════════════════════════════════ */
 
 body {
   font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 18.2px;
-  letter-spacing: 0.14px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
-/* Logo — serif */
+/* Logo — Playfair Display italic */
 .logo {
   font-family: var(--font-display);
+  font-style: italic;
   font-size: 16px;
   font-weight: 400;
 }
 
-/* Section titles — same size as body, context defines hierarchy */
+/* Seksjonstitler */
 .section-title {
   font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.14px;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
   margin-bottom: var(--space-sm);
 }
 
-/* Large quote — Instrument Serif italic for dramatic effect */
-.quote-text {
-  font-family: var(--font-display);
-  font-size: 30px;
-  line-height: 39px;
-  font-weight: 400;
-  font-style: italic;
+/* Caps-etikett — uppercase label over seksjoner */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
-/* Captions */
+/* Stor sitatblokk — Playfair Display italic */
+.quote-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Bildetekster */
 .caption {
   font-size: 13px;
-  color: var(--color-gray-caption);
-  line-height: 18.2px;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  line-height: 1.6;
 }

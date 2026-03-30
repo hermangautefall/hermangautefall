@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════
-   PAGE TRANSITION — Slide-up
+   SIDE-OVERGANG — Slide-up
    ═══════════════════════════════════════ */
 
 @keyframes slideUp {
@@ -11,6 +11,52 @@
   from { transform: translateY(0); }
   to   { transform: translateY(-100%); }
 }
+
+/* ═══════════════════════════════════════
+   HERO — Gradient mesh-animasjon
+   ═══════════════════════════════════════ */
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ═══════════════════════════════════════
+   HERO-TEKST — Fade inn ved sidelast
+   ═══════════════════════════════════════ */
+
+@keyframes heroTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═══════════════════════════════════════
+   SCROLL FADE-IN
+   ═══════════════════════════════════════ */
+
+.fade-in-el {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-el.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger-forsinkelse for elementer i samme gruppe */
+.fade-in-el:nth-child(2) { transition-delay: 100ms; }
+.fade-in-el:nth-child(3) { transition-delay: 200ms; }
+.fade-in-el:nth-child(4) { transition-delay: 300ms; }
 
 /* ═══════════════════════════════════════
    LAZY LOAD FADE-IN
@@ -42,7 +88,7 @@
 }
 
 /* ═══════════════════════════════════════
-   MOBILE NAV
+   MOBIL NAV
    ═══════════════════════════════════════ */
 
 .mobile-nav-overlay {

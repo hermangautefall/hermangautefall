@@ -10,6 +10,8 @@
   <link rel="alternate" hreflang="en" href="https://hermangautefall.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://hermangautefall.com/">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/typography.css">
   <link rel="stylesheet" href="../css/animations.css">
@@ -17,7 +19,7 @@
 <body>
 
   <header>
-    <nav class="site-nav nav-transparent">
+    <nav class="site-nav">
       <a href="/en/" class="logo">Herman Gautefall</a>
       <ul class="nav-links">
         <li><a href="/en/">Home</a></li>
@@ -44,6 +46,8 @@
   </div>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
       <img src="../images/hero/Forsidebilde 1.png" alt="Herman Gautefall" class="hero-bg">
       <div class="hero-content">
@@ -52,24 +56,46 @@
       </div>
     </section>
 
+    <!-- QUOTE -->
     <section class="quote-section">
-      <p class="quote-text">"I play jazz because it's the only music that is never finished."</p>
+      <div class="quote-card">
+        <div class="quote-accent"></div>
+        <p class="quote-text">"I play jazz because it's the only music that is never finished."</p>
+      </div>
     </section>
 
-    <section class="section-black">
-      <p class="quote-text">Jazz pianist, film composer and music teacher from Kristiansand — based in Oslo. From classical orchestra to jazz stages in Norway, Italy and Greece.</p>
-    </section>
-
-    <section class="section-gray">
-      <p>Herman Gautefall Olsson is a jazz pianist, film composer and founder of Løkken Music School in Oslo. Trained at the University of Agder under Jan Gunnar Hoff and with an exchange year at Saint Louis College of Music in Rome, he has built a career spanning solo evenings and jazz festivals to film music for international productions. He performs with artists such as Sofie Fjellvang, Celine Berstad and The Daisy Sisters, and has appeared on stages from Kongsberg Jazz Festival to the Kardamili International Jazz Festival in Greece.</p>
+    <!-- CARD GRID -->
+    <section class="cards-section">
+      <div class="cards-grid">
+        <div class="content-card fade-in-el">
+          <h2>Music</h2>
+          <p>Jazz pianist with international festival experience from Kongsberg Jazz Festival to Kardamili International Jazz Festival. Recordings, concerts and film scores.</p>
+          <a class="text-link" href="/en/music.html">View discography &rarr;</a>
+        </div>
+        <div class="content-card fade-in-el">
+          <h2>About</h2>
+          <p>From Kristiansand to Oslo via the University of Agder and Saint Louis College of Music in Rome. Pianist, composer and director of Løkken Music School.</p>
+          <a class="text-link" href="/en/about.html">Read more &rarr;</a>
+        </div>
+        <div class="content-card fade-in-el">
+          <h2>Piano Lessons</h2>
+          <p>Private piano lessons for children, teenagers and adults in central Oslo. All levels and genres. Free trial lesson through Løkken Music School.</p>
+          <a class="text-link" href="/en/piano-lessons.html">Read more &rarr;</a>
+        </div>
+        <div class="content-card fade-in-el">
+          <h2>Contact</h2>
+          <p>Questions about concerts, collaborations or lessons? Feel free to get in touch directly.</p>
+          <a class="text-link" href="/en/contact.html">Get in touch &rarr;</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="social-links">
-      <a href="https://www.instagram.com/hermangautefall/" class="text-link">Instagram</a>
-      <a href="https://www.youtube.com/@hermangautefall" class="text-link">YouTube</a>
+      <a href="https://www.instagram.com/hermangautefall/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.youtube.com/@hermangautefall" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
     <p>&copy; 2025 Herman Gautefall</p>
   </footer>

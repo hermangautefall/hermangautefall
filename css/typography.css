@@ -1,63 +1,28 @@
 /* ═══════════════════════════════════════
    FONT IMPORTS
-   Playfair Display (display/titler) — Google Fonts
-   Inter (brødtekst)                 — Google Fonts
+   Playfair Display — display/titler
+   Inter            — brødtekst
    ═══════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 /* ═══════════════════════════════════════
-   TYPOGRAFISK SKALA
+   TYPOGRAFISK BASE
+   Komponent-typografi defineres i style.css
    ═══════════════════════════════════════ */
 
 body {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-}
-
-/* Logo — Playfair Display italic */
-.logo {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-/* Seksjonstitler */
-.section-title {
-  font-family: var(--font-body);
-  font-size: 22px;
-  font-weight: 500;
+  line-height: 1.65;
   letter-spacing: 0;
-  margin-bottom: var(--space-sm);
 }
 
-/* Caps-etikett — uppercase label over seksjoner */
-.section-label {
+.caption {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 300;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
-/* Stor sitatblokk — Playfair Display italic */
-.quote-text {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 32px;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-/* Bildetekster */
-.caption {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
   line-height: 1.6;
 }

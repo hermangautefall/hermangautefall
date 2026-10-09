@@ -1,27 +1,4 @@
 /* ═══════════════════════════════════════
-   SIDE-OVERGANG — Slide-up
-   ═══════════════════════════════════════ */
-
-@keyframes slideUp {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-100%); }
-}
-
-/* ═══════════════════════════════════════
-   HERO — Gradient mesh-animasjon
-   ═══════════════════════════════════════ */
-
-@keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-/* ═══════════════════════════════════════
    HERO-TEKST — Fade inn ved sidelast
    ═══════════════════════════════════════ */
 
@@ -74,23 +51,16 @@
 }
 
 /* ═══════════════════════════════════════
-   THUMBNAIL HOVER
+   REDUSERT BEVEGELSE
    ═══════════════════════════════════════ */
 
-.work-item img,
-.thumb img {
-  transition: opacity 0.3s ease-out, transform 0.4s ease-out;
-}
-
-.work-item:hover img,
-.thumb:hover img {
-  opacity: 0.85;
-}
-
-/* ═══════════════════════════════════════
-   MOBIL NAV
-   ═══════════════════════════════════════ */
-
-.mobile-nav-overlay {
-  transition: transform 300ms cubic-bezier(0.52, 0.16, 0.24, 1);
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .fade-in-el {
+    opacity: 1;
+    transform: none;
+  }
 }

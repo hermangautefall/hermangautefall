@@ -34,37 +34,6 @@
 })();
 
 /* ═══════════════════════════════════════
-   SIDE-OVERGANG — Slide-up overlay
-   ═══════════════════════════════════════ */
-
-(function () {
-  const overlay = document.querySelector('.page-overlay');
-  if (!overlay) return;
-
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) return;
-
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      overlay.classList.add('slide-up');
-      setTimeout(() => {
-        window.location.href = href;
-      }, 500);
-    });
-  });
-
-  window.addEventListener('load', () => {
-    overlay.style.transform = 'translateY(0)';
-    overlay.style.transition = 'none';
-    requestAnimationFrame(() => {
-      overlay.style.transition = 'transform 0.5s cubic-bezier(0.52, 0.16, 0.24, 1)';
-      overlay.style.transform = 'translateY(-100%)';
-    });
-  });
-})();
-
-/* ═══════════════════════════════════════
    SCROLL FADE-IN — .fade-in-el
    ═══════════════════════════════════════ */
 

@@ -41,12 +41,15 @@ hermangautefall/
 └── fonts/
 
 ## Designprinsipper
-Inspirert av haniarani.com. Følg disse reglene konsekvent:
-- Monokrom fargepalett: sort, hvit og grånyanser
-- Ingen tradisjonelle CTA-knapper — alle lenker er ren tekst med klassen .text-link
-- Fixed transparent navbar som blir hvit/opak ved scroll
-- Fullskjerm hero-bilde (100vh) med tekst direkte på bildet
-- Quote-seksjon på sort bakgrunn etter hero på forsiden
+Inspirert av hognekleiberg.com, men ikke en kopi. Hold siden veldig enkel. Følg disse reglene konsekvent:
+- Fargepalett: camel (#b8915c), kremhvit (#f1eadb) og oliven (#6b7244), med mørk olivensort (#2c301f) som tekstfarge
+- Fonter: Young Serif (titler) og Bitter (brødtekst), fra Google Fonts
+- Camel-felt øverst på forsiden og pianosiden, med stor tittel og et innfelt bilde som går over i kremhvit bakgrunn
+- Bilder vises i gråtoner. Hero-bildene har en svak oliventone
+- Oliven brukes som aksent (lenker, nummerering) og som bakgrunn på CTA-seksjonen
+- Ingen tradisjonelle CTA-knapper: alle lenker er ren tekst
+- Fixed transparent navbar som blir kremhvit/opak ved scroll
+- Footer: navn til venstre, sosiale medier i midten, e-post til høyre
 - Sosiale medier som rene tekstlenker, ikke ikoner
 - Ingen underline på lenker, hover-effekt: opacity 0.6
 
